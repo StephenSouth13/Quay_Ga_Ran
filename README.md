@@ -1,49 +1,65 @@
-# FAST-FOOD Project
+🍗 Quay Gà Rán & Pizza
+Website đặt món ăn nhanh dành cho cửa hàng Gà Rán & Pizza tại Củ Chi.
+Giao diện thân thiện, hỗ trợ đặt hàng nhanh chóng, tương thích với mọi thiết bị.
 
-## Overview
-The FAST-FOOD project is a web application designed for a fast-food restaurant, showcasing the menu items and allowing users to place orders online. The application features a visually appealing design with a yellow color scheme, smooth scrolling effects, and responsive layouts for mobile devices.
 
-## Project Structure
-```
-FAST-FOOD
-├── assets
-│   └── [images go here]
-├── src
-│   ├── script.js        # JavaScript for image popup, slider navigation, and form submission
-│   └── mail.js          # JavaScript for sending emails using EmailJS
-├── style.css            # CSS styles for the project
-├── index1.html          # Main HTML file for the landing page
-└── README.md            # Project documentation
-```
+📦 Tính năng chính
+🛒 Đặt hàng trực tuyến với các món ăn đa dạng
 
-## Features
-- **Image Popup**: Users can click on menu items to view larger images in a popup modal.
-- **Slider Navigation**: A slider on the homepage to showcase different menu items.
-- **Order Form**: Users can fill out an order form to place their orders.
-- **Email Submission**: Orders are sent via email without the need for a backend server.
-- **Responsive Design**: The application is fully responsive and works well on mobile devices.
+📱 Giao diện responsive, tối ưu cho cả desktop và mobile
 
-## Setup Instructions
-1. **Clone the Repository**: 
-   ```bash
-   git clone [repository-url]
-   cd FAST-FOOD
-   ```
+📍 Tích hợp bản đồ Google Maps hiển thị địa điểm cửa hàng
 
-2. **Open the Project**: Open `index1.html` in your web browser to view the application.
+📞 Liên hệ nhanh qua Facebook, Zalo hoặc gọi điện trực tiếp
 
-3. **Email Configuration**: 
-   - To enable email functionality, configure the `src/mail.js` file with your EmailJS or similar service credentials.
+✉️ Gửi đơn hàng qua email với hiệu ứng xác nhận mượt mà
 
-4. **Assets**: Place all image assets in the `assets` directory.
+🚀 Truy cập trực tiếp
+👉 Xem trang web tại đây
 
-## Usage
-- Navigate through the menu items and click on them to view details.
-- Use the order form to submit your order. Ensure to fill in all required fields.
-- Click the submit button to send your order via email.
+🛠️ Cách sử dụng
+Clone hoặc tải về dự án:
 
-## Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+bash
+Sao chép
+Chỉnh sửa
+git clone https://github.com/StephenSouth13/Quay_Ga_Ran.git
+Mở tệp index.html trong trình duyệt:
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+Sử dụng trình duyệt yêu thích của bạn để mở tệp index.html.
+
+Tùy chỉnh email nhận đơn hàng:
+
+Mở tệp script.js.
+
+Tìm dòng chứa your-email@example.com và thay thế bằng địa chỉ email của bạn:
+
+javascript
+Sao chép
+Chỉnh sửa
+const email = "your-email@example.com"; // Thay bằng email của bạn
+📁 Cấu trúc thư mục
+pgsql
+Sao chép
+Chỉnh sửa
+Quay_Ga_Ran/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│   └── screenshot.png
+└── README.md
+📸 Hình ảnh giao diện
+
+🤝 Đóng góp
+Chào mừng mọi đóng góp từ cộng đồng! Nếu bạn muốn cải thiện dự án:
+
+Fork dự án
+
+Tạo nhánh mới với tính năng hoặc sửa lỗi của bạn
+
+Gửi Pull Request để chúng tôi xem xét và hợp nhất
+
+📄 Giấy phép
+Dự án này được cấp phép theo MIT License.
+
