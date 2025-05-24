@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu Gà Rán & Pizza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+      <span class="logo">Gà Rán & Pizza</span>
+      <nav id="main-nav">
+        <a href="#home">Trang Chủ</a>
+        <a href="#menu">Menu</a>
+        <a href="#order">Đặt hàng</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Mở menu">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- SECTION TRANG CHỦ -->
+  <section id="home" class="home-slider-section">
+    <div class="home-slider">
+      <div class="slide active">
+        <img src="assets/menugaran.png" alt="Menu Gà Rán">
+        <div class="slide-caption">Menu Gà Rán</div>
+      </div>
+      <div class="slide">
+        <img src="assets/menupizza.png" alt="Menu Pizza">
+        <div class="slide-caption">Menu Pizza</div>
+      </div>
+      <button class="slider-btn prev" onclick="moveSlide(-1)"><i class="fa fa-chevron-left"></i></button>
+      <button class="slider-btn next" onclick="moveSlide(1)"><i class="fa fa-chevron-right"></i></button>
+      <div class="slider-dots" id="slider-dots"></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- MENU -->
+    <div id="menu" class="section-title">Menu Đặc Sắc</div>
+    <div class="menu-grid">
+      <!-- GÀ RÁN -->
+      <div class="menu-box" onclick="openModal('assets/duiga.png', 'Đùi Gà Rán')">
+        <div class="menu-img">
+          <img src="assets/duiga.png" alt="Đùi gà rán">
+        </div>
+        <div class="menu-title">Đùi Gà Rán</div>
+        <div class="menu-desc">Giòn rụm, đậm vị, thơm ngon khó cưỡng.</div>
+        <div class="menu-price">30K - 35K</div>
+      </div>
+      <div class="menu-box" onclick="openModal('assets/canhga.png', 'Cánh Gà Rán')">
+        <div class="menu-img">
+          <img src="assets/canhga.png" alt="Cánh gà rán">
+        </div>
+        <div class="menu-title">Cánh Gà Rán</div>
+        <div class="menu-desc">Cánh gà tẩm ướp, rán vàng giòn tan.</div>
+        <div class="menu-price">30K - 35K</div>
+      </div>
+      <!-- COMBO -->
+      <div class="menu-box" onclick="openModal('assets/combo30k.png', 'Combo 30K')">
+        <div class="menu-img">
+          <img src="assets/combo30k.png" alt="Combo nhỏ">
+        </div>
+        <div class="menu-title">Combo 30K</div>
+        <div class="menu-desc">Gà nhỏ + Khoai + Nước</div>
+        <div class="menu-price">30K</div>
+      </div>
+      <div class="menu-box" onclick="openModal('assets/combo40k.png', 'Combo 40K')">
+        <div class="menu-img">
+          <img src="assets/combo40k.png" alt="Combo lớn">
+        </div>
+        <div class="menu-title">Combo 40K</div>
+        <div class="menu-desc">Gà lớn + Khoai + Nước</div>
+        <div class="menu-price">40K</div>
+      </div>
+      <div class="menu-box" onclick="openModal('assets/combo50k.png', 'Combo 50K')">
+        <div class="menu-img">
+          <img src="assets/combo50k.png" alt="Combo đặc biệt">
+        </div>
+        <div class="menu-title">Combo 50K</div>
+        <div class="menu-desc">Gà nhỏ + Khoai + Nước + Gà viên</div>
+        <div class="menu-price">50K</div>
+      </div>
+      <!-- MÓN KHÁC -->
+      <div class="menu-box" onclick="openModal('assets/khoaitay.png', 'Khoai Lang Lắc')">
+        <div class="menu-img">
+          <img src="assets/khoaitay.png" alt="Khoai lang lắc">
+        </div>
+        <div class="menu-title">Khoai Lang Lắc</div>
+        <div class="menu-desc">Khoai lang chiên giòn, lắc phô mai thơm béo.</div>
+        <div class="menu-price">20K - 25K</div>
+      </div>
+      <div class="menu-box" onclick="openModal('assets/khoaitay.png', 'Khoai Tây Lắc')">
+        <div class="menu-img">
+          <img src="assets/khoaitay.png" alt="Khoai tây lắc">
+        </div>
+        <div class="menu-title">Khoai Tây Lắc</div>
+        <div class="menu-desc">Khoai tây chiên giòn, lắc phô mai hấp dẫn.</div>
+        <div class="menu-price">20K - 25K</div>
+      </div>
+      <!-- PIZZA -->
+      <div class="menu-box" onclick="openModal('assets/tôm.png', 'Pizza Phomai - Rau Củ')">
+        <div class="menu-img">
+          <img src="assets/tôm.png" alt="Pizza phomai rau củ">
+        </div>
+        <div class="menu-title">Pizza Phomai - Rau Củ</div>
+        <div class="menu-desc">Pizza phomai béo ngậy, rau củ tươi ngon.</div>
+        <div class="menu-price">25K</div>
+      </div>
+      <div class="menu-box" onclick="openModal('assets/tôm.png', 'Pizza Phomai - Xúc Xích')">
+        <div class="menu-img">
+          <img src="assets/tôm.png" alt="Pizza phomai xúc xích">
+        </div>
+        <div class="menu-title">Pizza Phomai - Xúc Xích</div>
+        <div class="menu-desc">Pizza phomai, xúc xích đậm đà, thơm ngon.</div>
+        <div class="menu-price">30K</div>
+      </div>
+      <div class="menu-box" onclick="openModal('assets/tôm.png', 'Pizza Phomai - Tôm')">
+        <div class="menu-img">
+          <img src="assets/tôm.png" alt="Pizza phomai tôm">
+        </div>
+        <div class="menu-title">Pizza Phomai - Tôm</div>
+        <div class="menu-desc">Pizza phomai kết hợp tôm tươi ngọt vị.</div>
+        <div class="menu-price">40K</div>
+      </div>
+      <div class="menu-box" onclick="openModal('assets/tôm.png', 'Pizza Phomai - Tôm Mực')">
+        <div class="menu-img">
+          <img src="assets/tôm.png" alt="Pizza phomai tôm mực">
+        </div>
+        <div class="menu-title">Pizza Phomai - Tôm Mực</div>
+        <div class="menu-desc">Pizza phomai, tôm mực tươi ngon, hấp dẫn.</div>
+        <div class="menu-price">50K</div>
+      </div>
+    </div>
+
+    <!-- ĐẶT HÀNG -->
+    <section id="order">
+      <div class="section-title">Đặt Hàng Nhanh</div>
+      <form class="order-form" onsubmit="return submitOrder(event)">
+        <div class="form-group">
+          <label for="name"><i class="fa fa-user"></i> Họ tên *</label>
+          <input type="text" id="name" name="name" required placeholder="Nhập họ tên...">
+        </div>
+        <div class="form-group">
+          <label for="phone"><i class="fa fa-phone"></i> Số điện thoại *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="Nhập số điện thoại...">
+        </div>
+        <div class="form-group">
+          <label for="address"><i class="fa fa-location-dot"></i> Địa chỉ giao hàng *</label>
+          <input type="text" id="address" name="address" required placeholder="Nhập địa chỉ...">
+        </div>
+        <div class="form-group">
+          <label for="order-items"><i class="fa fa-utensils"></i> Chọn món *</label>
+          <select id="order-items" name="order-items" required>
+            <option value="">-- Chọn món --</option>
+            <option>Đùi Gà Rán</option>
+            <option>Cánh Gà Rán</option>
+            <option>Combo 30K</option>
+            <option>Combo 40K</option>
+            <option>Combo 50K</option>
+            <option>Khoai Lang Lắc</option>
+            <option>Khoai Tây Lắc</option>
+            <option>Pizza Phomai - Rau Củ</option>
+            <option>Pizza Phomai - Xúc Xích</option>
+            <option>Pizza Phomai - Tôm</option>
+            <option>Pizza Phomai - Tôm Mực</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="note"><i class="fa fa-sticky-note"></i> Ghi chú (nếu có)</label>
+          <textarea id="note" name="note" rows="2" placeholder="Ví dụ: Không lấy tương ớt..."></textarea>
+        </div>
+        <button type="submit" class="form-submit-btn">
+          <span>Gửi đơn hàng</span>
+          <i class="fa fa-paper-plane"></i>
+        </button>
+        <div id="order-success" class="form-success-msg">Đặt hàng thành công! Chúng tôi sẽ liên hệ xác nhận.</div>
+      </form>
+    </section>
+
+    <!-- LIÊN HỆ -->
+    <div id="contact" class="section-title">Liên hệ & Mạng xã hội</div>
+    <div style="text-align:center; margin-bottom:30px;">
+      <div>
+        <i class="fa-solid fa-phone"></i> <a href="tel:0768933049" style="color:var(--main-orange);text-decoration:none;">0768 933 049</a> |
+        <i class="fa-solid fa-location-dot"></i> 104, Nguyễn Văn Khạ, tổ 6, KP7, Củ Chi
+      </div>
+      <div style="margin-top:10px;">
+        <a href="https://facebook.com/" target="_blank" style="color:#1877f2; margin:0 8px; font-size:1.6rem;"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://zalo.me/0768933049" target="_blank" style="color:#0099ff; margin:0 8px; font-size:1.6rem;"><i class="fa-solid fa-comment-dots"></i></a>
+      </div>
+    </div>
+
+    <!-- MAP -->
+    <div class="map-section">
+      <h3>Bản Đồ Địa Điểm</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221.53264835960826!2d106.49069299567195!3d10.976599045301459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310b2b7fc1be73c5%3A0xfc82db65c6eed3ae!2zVGjDoWkgU3RvcmUgQ-G7pyBDaGk!5e1!3m2!1sen!2sus!4v1748106764720!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer>
+      <div class="footer-contact">
+        <i class="fas fa-map-marker-alt"></i> 104, Nguyễn Văn Khạ, tổ 6, KP7, Củ Chi
+        <span>|</span>
+        <i class="fas fa-phone"></i> <a href="tel:0768933049">0768 933 049</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://zalo.me/0768933049" target="_blank" title="Zalo">
+          <img src="assets/zalo.png" alt="Zalo" style="height:22px;width:22px;object-fit:contain;vertical-align:middle;">
+        </a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025 Gà Rán & Pizza. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Float Facebook -->
+    <a href="https://www.facebook.com/yondugbeaz1209" target="_blank" class="fb-float" title="Chat Facebook">
+      <i class="fab fa-facebook-messenger"></i>
+    </a>
+
+    <div id="imgModal" class="modal-img">
+      <span class="close-modal">&times;</span>
+      <img class="modal-img-content" id="modalImg">
+      <div class="modal-img-caption" id="modalCaption"></div>
+    </div>
+
+    <script src="src/script.js"></script>
+    <script src="src/mail.js"></script>
+</body>
+</html>
